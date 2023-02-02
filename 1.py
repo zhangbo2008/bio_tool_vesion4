@@ -39,7 +39,7 @@ import tkinter
 root = Tk()
 # frame = Frame (root, relief=RAISED, borderwidth=20)
 
-text = Text(root, width=100,height=20,font=('宋体',15),wrap = 'none')
+text = Text(root, width=125,height=20,font=('宋体',15),wrap = 'none')
 text.insert('1.0', '贴入你要处理的sdfsadf张某,李某,sdfsdfasfasd王某他们杀人了fas]\n sdfsadf张某,李某,sdfsdfasfasd王某他们杀人了文字 中文 English 都行\n贴入你要处理的文字')# 1.0 第一行0列.
 
 colorlist=[i[0] for i in color_and_biaoqian]
@@ -259,16 +259,17 @@ def setup_button():
             continue
 #============callback函数里面不允许写变量..........  #参考https://www.cnpython.com/qa/68533
         if 1:           # lambda表达式.里面要写x=i, 然后再把x传入:右边的函数.这样可以脱离之前的变量控制.
-            b=tkinter.Button(frame, text =labellist[i], command = lambda x=i: helloCallBack(colorlist[x]))
+            fffff=('宋体',10,'bold')
+            b=tkinter.Button(frame, bg=colorlist[i],font=fffff,text =labellist[i], command = lambda x=i: helloCallBack(colorlist[x]))
             b.grid(row=0,column=(i+1),padx=10)
             save_all_button.append(b)#===============把变量存在全局变量里面,变量就不会跟着函数销毁了.
     #================下面一排是全标注===全文有这个词的直接全标注上.
 
-            b=tkinter.Button(frame, text =labellist[i]+'全标注', command = lambda x=i:helloCallBack_quanbiaozhu(colorlist[x]))
+            b=tkinter.Button(frame, bg=colorlist[i], font=fffff,text =labellist[i]+'全标注', command = lambda x=i:helloCallBack_quanbiaozhu(colorlist[x]))
             b.grid(row=1,column=(i+1),padx=10)
             save_all_button.append(b)
 
-            b = tkinter.Button(frame, text=labellist[i] + '正则标注',
+            b = tkinter.Button(frame,  bg=colorlist[i],font=fffff,text=labellist[i] + '正则标注',
                                command=lambda x=i: zhengzehelloCallBack_quanbiaozhu(colorlist[x]))
             b.grid(row=2, column=(i + 1), padx=10)
             save_all_button.append(b)
@@ -430,7 +431,8 @@ b.grid(row=0,column=0,padx=10)
 
 
 
-
+aaa=tkinter.Label(frame,text='提示:右边写入正则表达式')
+aaa.grid(row=2,column=0,padx=10)
 
 
 b=tkinter.Button(frame, text ="保存文件为BIO和txt", command = save)
