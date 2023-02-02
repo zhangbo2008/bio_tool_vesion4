@@ -284,6 +284,12 @@ def setup_button():
 
 
 def save():
+        moshi=cmb.get()
+        print(moshi,3333333333333333333333333333333333333333333333333333)
+        if 'es' in moshi:
+            tool_type='bioes'
+        else:
+            tool_type = 'bio'
         print("获取文本")
         result = text.get("1.0", "end")  # 获取文本输入框的内容
 
@@ -442,6 +448,27 @@ b.grid(row=0,column=0,padx=10)
 
 
 
+# entryExample = Entry(root)
+# entryExample.place(x = -10,
+#         y =-10,
+#         width=2000,
+#         height=100)
+import tkinter
+from tkinter import ttk  # 导入ttk模块，因为下拉菜单控件在ttk中
+
+
+
+
+# 创建下拉菜单
+cmb = ttk.Combobox(frame)
+cmb.grid(row=1, column=(1), padx=20)
+# 设置下拉菜单中的值
+cmb['value'] = ('标注模式bioes', '标注模式bio')
+
+# 设置默认值，即默认下拉框中的内容
+cmb.current(0)
+# 默认值中的内容为索引，从0开始
+
 
 
 
@@ -508,11 +535,6 @@ def reg():
 
 
 
-# entryExample = Entry(root)
-# entryExample.place(x = -10,
-#         y =-10,
-#         width=2000,
-#         height=100)
 
 
 
