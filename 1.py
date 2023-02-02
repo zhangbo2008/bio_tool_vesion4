@@ -36,7 +36,7 @@ color_and_biaoqian=[
 from tkinter import *
 #=============第一层是text
 import tkinter
-root = Tk()
+root = Tk(className='                                                                                                                            信息抽取标注工具(一键生成bio格式)')
 # frame = Frame (root, relief=RAISED, borderwidth=20)
 
 text = Text(root, width=125,height=20,font=('宋体',15),wrap = 'none')
