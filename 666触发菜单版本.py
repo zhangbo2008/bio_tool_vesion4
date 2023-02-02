@@ -17,7 +17,7 @@
 #=========现在的方案是 按照bio里面的直接按照配色表生成.现在支持10个.#==========现在还是自动配色吧. 搞一个配色表存着太麻烦感觉.
 # =======================配置!!!!!!!!!!!!!!!!!!!
 color_and_biaoqian=[
-    ['white','标注为空'],
+
     ['red','person'],
     ['yellow','address'],
     ['Blue','org'],
@@ -27,6 +27,50 @@ color_and_biaoqian=[
     ['Gray', 'time3'],
     ['Brown', 'time4'],
     ['Tan', 'time5'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
+    ['Beige', 'time6'],
     ['Beige', 'time6'],
     # ['Beige', 'time6'],
     # ['Beige', 'time6'],
@@ -38,6 +82,7 @@ color_and_biaoqian=[
 #=============支持2种模式, 可以先写bioes或者bio
 tool_type='bioes'
 # tool_type='bio'
+yihangduoshaoniu=10 #====================按钮排版,一行多少个.
 
 
 
@@ -162,41 +207,6 @@ def helloCallBack_quanbiaozhu(color):
 
            # print(text.tag_ranges(color))
 import  re
-#
-# def zhengzehelloCallBack_quanbiaozhu2(color):
-#
-#    print(1111111111111)
-#    if 1:
-#        print(SEL_FIRST,SEL_LAST)
-#        print(text.index("sel.first"),text.index("sel.last"))
-#        text.tag_config(color,  background=color)  # 再为标签进行设置!!!!!!!!!!!!!!!!!这句话千瓦不要忘了!!!!!!!!!!!!!!
-#        wenben='g'
-#        print("获取到的文本是",wenben)
-#        if 1:
-#           #=============调用python的搜索
-#           all_text=text.get('1.0',END)
-#           print(all_text)
-#           tmp= all_text.split('\n')
-#           out2=[]
-#           for i in range(len(tmp)):#=========这里面需要字符串的kmp算法
-#               kkk=kmp_for_array.kmp(tmp[i],wenben,return_all=True)
-#               if kkk!=-1:
-#                 #================一个bug, 比如 aaa 然后我要把aa标注为红色.那么就会图2次.所以这里面我们强制让他只图最前面的aa,后的aa忽略#==============3.0版本修复了这个bug
-#                 last_tail=0
-#                 for j in kkk:
-#                     if j>=last_tail:
-#                         out2.append([f'{i+1}.{j}',f'{i+1}.{j+len(wenben)}' ])
-#                         last_tail=j+len(wenben)
-#
-#
-#               print(out2,999999999999999999)
-#
-#        for weizhi in out2:
-#        #===============注意要先删除其他的标签.
-#            for i in colorlist:
-#                text.tag_remove( i,weizhi[0], weizhi[1])  # =======变色
-#            if color !='white':#======white实际上是不进行背景色标注!这样效果最好!!!!!!a trick
-#                 text.tag_add(color,weizhi[0], weizhi[1]) #=======变色
 
 def zhengzehelloCallBack_quanbiaozhu(color):
 
@@ -255,7 +265,7 @@ def zhengzehelloCallBack_quanbiaozhu(color):
 #放按钮使用.
 aa=[0,1,2,3,4,5,6,7,8,9,10]
 save_all_button=[]
-paddd=2
+paddd=12
 def setup_button():
 
     print('进行重置按钮')
@@ -270,24 +280,69 @@ def setup_button():
             i.grid_forget()
   # row column可以自己修改按钮放的位置!!!!!
     for i in range(len(color_and_biaoqian)):
-        if i==0:
-            continue
+
 #============callback函数里面不允许写变量..........  #参考https://www.cnpython.com/qa/68533
         if 1:           # lambda表达式.里面要写x=i, 然后再把x传入:右边的函数.这样可以脱离之前的变量控制.
-            fffff=('宋体',10,'bold')
-            b=tkinter.Button(frame, bg=colorlist[i],font=fffff,text =labellist[i], command = lambda x=i: helloCallBack(colorlist[x]))
-            b.grid(row=0,column=(i+1),padx=paddd)
-            save_all_button.append(b)#===============把变量存在全局变量里面,变量就不会跟着函数销毁了.
+            # fffff=('宋体',10,'bold')
+            # b=tkinter.Button(frame, bg=colorlist[i],font=fffff,text =labellist[i], command = lambda x=i: helloCallBack(colorlist[x]))
+            # b.grid(row=0,column=(i+1),padx=paddd)
+            # save_all_button.append(b)#===============把变量存在全局变量里面,变量就不会跟着函数销毁了.
     #================下面一排是全标注===全文有这个词的直接全标注上.
 
-            b=tkinter.Button(frame, bg=colorlist[i], font=fffff,text =labellist[i]+'全标', command = lambda x=i:helloCallBack_quanbiaozhu(colorlist[x]))
-            b.grid(row=1,column=(i+1),padx=paddd)
-            save_all_button.append(b)
+            # b=tkinter.Button(frame, bg=colorlist[i], font=fffff,text =labellist[i]+'全标', command = lambda x=i:helloCallBack_quanbiaozhu(colorlist[x]))
+            # b.grid(row=1,column=(i+1),padx=paddd)
+            # save_all_button.append(b)
+#==================================================
+            # b = tkinter.Button(frame,  bg=colorlist[i],font=fffff,text=labellist[i] + '正则',
+            #                    command=lambda x=i: zhengzehelloCallBack_quanbiaozhu(colorlist[x]))
+            # b.grid(row=2, column=(i + 1), padx=paddd)
+            # save_all_button.append(b)
 
-            b = tkinter.Button(frame,  bg=colorlist[i],font=fffff,text=labellist[i] + '正则',
-                               command=lambda x=i: zhengzehelloCallBack_quanbiaozhu(colorlist[x]))
-            b.grid(row=2, column=(i + 1), padx=paddd)
-            save_all_button.append(b)
+#=====================第四排综合前3排.
+
+            fun(i)
+
+            # xxx=i
+            # menubar.add_command(label=xxx, command=lambda x=xxx:helloCallBack_quanbiaozhu(colorlist[x]))
+
+
+
+
+
+
+
+
+def fun(i):
+            menubar = tkinter.Menu(frame)
+
+            def helper1(x=i):
+                x = i
+                return helloCallBack_quanbiaozhu(colorlist[x])
+            def helper2(x=i):
+                x = i
+                return zhengzehelloCallBack_quanbiaozhu(colorlist[x])
+            xxx = '全标'
+            menubar.add_command(label=xxx, command=helper1)
+            xxx = '正则'
+            menubar.add_command(label=xxx, command=helper2)
+            # 事件处理函数一定要至少有一个参数，且第一个参数表示的是系统事件
+            def pop(event,a):
+                # 注意使用 event.x 和 event.x_root 的区别
+                # menubar.post(event.x, event.y)
+                # print(a)
+                menubar.post(event.x_root, event.y_root)
+            fffff=('宋体',10,'bold')
+            b=tkinter.Button(frame, bg=colorlist[i],font=fffff,text =labellist[i], command = lambda x=i: helloCallBack(colorlist[x]))
+            b.bind("<Button-3>", lambda event, a=3: pop(event, a))
+            b.grid(row=i//yihangduoshaoniu,column=(i%yihangduoshaoniu+2),padx=paddd)
+            # save_all_button.append(b)
+
+
+            # b=tkinter.Button(frame, text ="test4", )
+            # b.bind("<Button-3>", lambda event,a=3:pop(event,a))# https://blog.csdn.net/qq_34633194/article/details/120631709 传参方法.
+            # b.grid(row=3,column=0,padx=10)
+
+
 
 
 def save():
