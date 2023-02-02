@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c658a5-b92a-4f39-9868-d73fecc1f563" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.bio" beforeDir="false" afterPath="$PROJECT_DIR$/output.bio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
       <recent name="D:\做一个bio标注工具" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.3">
+  <component name="RunManager" selected="Python.1">
     <configuration name="1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/做一个bio标注工具/1.html" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -144,8 +144,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.3" />
         <item itemvalue="Python.1" />
+        <item itemvalue="Python.3" />
         <item itemvalue="Python.2" />
         <item itemvalue="JavaScript Debug.1.html" />
         <item itemvalue="Python.kmp_for_array" />
@@ -168,7 +168,9 @@
       <workItem from="1644290045560" duration="3698000" />
       <workItem from="1675240760402" duration="10910000" />
       <workItem from="1675251840460" duration="4408000" />
-      <workItem from="1675256305015" duration="1310000" />
+      <workItem from="1675256305015" duration="1695000" />
+      <workItem from="1675297579786" duration="11000" />
+      <workItem from="1675308999453" duration="1122000" />
     </task>
     <servers />
   </component>
@@ -180,22 +182,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1123" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1675255253237" />
-    <state width="1237" height="180" key="GridCell.Tab.0.bottom" timestamp="1675257672284">
+    <state width="1237" height="98" key="GridCell.Tab.0.bottom" timestamp="1675311041574">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="180" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1675257672284" />
-    <state width="1237" height="180" key="GridCell.Tab.0.center" timestamp="1675257672283">
+    <state width="1237" height="98" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1675311041574" />
+    <state width="1237" height="98" key="GridCell.Tab.0.center" timestamp="1675311041574">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="180" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1675257672283" />
-    <state width="1237" height="180" key="GridCell.Tab.0.left" timestamp="1675257672283">
+    <state width="1237" height="98" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1675311041574" />
+    <state width="1237" height="98" key="GridCell.Tab.0.left" timestamp="1675311041574">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="180" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1675257672283" />
-    <state width="1237" height="180" key="GridCell.Tab.0.right" timestamp="1675257672284">
+    <state width="1237" height="98" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1675311041574" />
+    <state width="1237" height="98" key="GridCell.Tab.0.right" timestamp="1675311041574">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="180" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1675257672284" />
+    <state width="1237" height="98" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1675311041574" />
     <state width="1237" height="127" key="GridCell.Tab.1.bottom" timestamp="1675256272007">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -242,11 +244,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/1.py</url>
-          <line>364</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/1.py</url>
           <line>228</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
@@ -281,6 +278,6 @@
     <SUITE FILE_PATH="coverage/bio$kmp_for_array.coverage" NAME="kmp_for_array Coverage Results" MODIFIED="1643445840152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bio$2.coverage" NAME="2 Coverage Results" MODIFIED="1675246167958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bio$3.coverage" NAME="3 Coverage Results" MODIFIED="1675257672271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bio$1.coverage" NAME="1 Coverage Results" MODIFIED="1675257464149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bio$1.coverage" NAME="1 Coverage Results" MODIFIED="1675311041565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

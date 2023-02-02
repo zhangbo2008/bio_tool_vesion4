@@ -277,6 +277,15 @@ def setup_button():
 def save():
         print("获取文本")
         result = text.get("1.0", "end")  # 获取文本输入框的内容
+
+
+        with open('output.txt','w',encoding='utf-8') as f:
+            f.writelines(result)
+
+
+
+
+
         for i in colorlist:
             aaa=text.tag_ranges(i)###=得到的aaa标里面每2个表示开头结尾索引.
             print(aaa,i)
@@ -320,6 +329,17 @@ def save():
 
 setup_button()
 def chognzhi():
+
+    #============填入文本.
+    with open('output.txt' ,encoding='utf-8') as f:
+        tmp=f.readlines()
+    text.delete('1.0','end')
+    text.insert('1.0',''.join(tmp))
+
+
+
+
+
 
     with open('output.bio' ) as f:
         tmp=f.readlines()
@@ -395,7 +415,7 @@ def chognzhi():
 
 
 #=============第三版我们来实现读取bio文件的功能.为了方便就不加对话框了.直接读取output.bio
-b=tkinter.Button(frame, text ="读取bio文件", command = chognzhi)
+b=tkinter.Button(frame, text ="读取bio文件和txt", command = chognzhi)
 b.grid(row=0,column=0,padx=10)
 
 
@@ -413,7 +433,7 @@ b.grid(row=0,column=0,padx=10)
 
 
 
-b=tkinter.Button(frame, text ="保存文件为BIO", command = save)
+b=tkinter.Button(frame, text ="保存文件为BIO和txt", command = save)
 b.grid(row=1,column=0,padx=10)
 
 
