@@ -12,6 +12,15 @@
 加入了各种标注的颜色提醒.
 正则输入框里面写了默认的例子.
 都是些小改动就不录讲解视频了.有问题的童鞋可以github上提issue
+支持2种格式标注: bio和bioes 1.py:33行自行修改.
+
+
+
+bio和bioes的定义:https://blog.csdn.net/kevinjin2011/article/details/113939817
+
+
+
+
 
 
 

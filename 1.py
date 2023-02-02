@@ -15,7 +15,7 @@
 
 #==================自定义配置都写最上面:#如何动态修改tkinter按钮.
 #=========现在的方案是 按照bio里面的直接按照配色表生成.现在支持10个.#==========现在还是自动配色吧. 搞一个配色表存着太麻烦感觉.
-
+# =======================配置!!!!!!!!!!!!!!!!!!!
 color_and_biaoqian=[
     ['white','标注为空'],
     ['red','person'],
@@ -29,6 +29,14 @@ color_and_biaoqian=[
     # ['Tan', 'time5'],
     # ['Beige', 'time6']
 ]
+#=============支持2种模式, 可以先写bioes或者bio
+tool_type='bioes'
+# tool_type='bio'
+
+
+
+
+
 
 
 # 环境是win10 python3.6
@@ -36,7 +44,7 @@ color_and_biaoqian=[
 from tkinter import *
 #=============第一层是text
 import tkinter
-root = Tk(className='                                                                                                                            信息抽取标注工具(一键生成bio格式)')
+root = Tk(className='                                                                                                                            信息抽取标注工具(一键生成bioes格式)')
 # frame = Frame (root, relief=RAISED, borderwidth=20)
 
 text = Text(root, width=125,height=20,font=('宋体',15),wrap = 'none')
@@ -301,13 +309,22 @@ def save():
                 a12= int(aaa[2*j].string.split('.')[1])#首列
                 a21= int(aaa[2*j+1].string.split('.')[0])#尾行
                 a22= int(aaa[2*j+1].string.split('.')[1])# 尾列
-                if a11!=a21:
-                    print("bugle !!!!","索引在",a11,a12,a21,a22)
-                else:
-                    if a22-a12==1:#标注S!
-                        jieguo[a11-1][a12]="S-"+str(labellist[dex])
+                if tool_type!='bio':
+                    if a11!=a21:
+                        print("bugle !!!!","索引在",a11,a12,a21,a22)
                     else:
-                        jieguo[a11-1][a12:a22]=["B-"+str(labellist[dex])]+["I-"+str(labellist[dex])]*(a22-a12-2)+["E-"+str(labellist[dex])]
+                        if a22-a12==1:#标注S!
+                            jieguo[a11-1][a12]="S-"+str(labellist[dex])
+                        else:
+                            jieguo[a11-1][a12:a22]=["B-"+str(labellist[dex])]+["I-"+str(labellist[dex])]*(a22-a12-2)+["E-"+str(labellist[dex])]
+                if tool_type=='bio':
+                    if a11 != a21:
+                        print("bugle !!!!", "索引在", a11, a12, a21, a22)
+                    else:
+
+                            jieguo[a11 - 1][a12:a22] = ["B-" + str(labellist[dex])] + ["I-" + str(labellist[dex])] * (
+                                        a22 - a12 - 1)
+
         print(jieguo,111111111111111111111111111111111111111111111111111111)
         jieguo=[' '.join(i)+'\n' for i in jieguo]
         print(jieguo)
