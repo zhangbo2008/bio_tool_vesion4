@@ -460,7 +460,7 @@ from tkinter import ttk  # 导入ttk模块，因为下拉菜单控件在ttk中
 
 
 # 创建下拉菜单
-cmb = ttk.Combobox(frame)
+cmb = ttk.Combobox(frame,state="readonly")
 cmb.grid(row=1, column=(1), padx=20)
 # 设置下拉菜单中的值
 cmb['value'] = ('标注模式bioes', '标注模式bio')
