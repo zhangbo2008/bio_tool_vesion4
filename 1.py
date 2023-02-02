@@ -463,6 +463,7 @@ except:
 
 
 E1 = Entry(frame, bd =5,)
+E1.insert('0','.{1}某')
 
 E1.grid(row=2, column=(1), padx=20)
 
